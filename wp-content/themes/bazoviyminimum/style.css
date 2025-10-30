@@ -1,0 +1,28 @@
+/*
+Theme Name: Базовый минимум
+Theme URI: http://example.com/
+Author: Bam-Bam-Bam
+Author URI: http://example.com/
+Description: Классическая тема портфолио-фотографа с Bootstrap
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: creator-portfolio
+*/
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fafafa;
+}
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.widget {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}

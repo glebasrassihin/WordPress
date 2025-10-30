@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="//php bloginfo( 'charset' ); ">
+    <title>
+        <?php echo wp_get_document_title();?>
+    </title>
+
+    <link rel="stylesheet" href="//php echo_get_stylesheet_uri();"type="text/css" />
+    <?php wp_head(); ?>
+</head>
+<body>
+    
+<?php
+wp_nav_menu( array(
+    'theme_location' => 'header-menu',
+    'menu_class'     => 'header-menu-class', // CSS класс для стилизации меню
+) );
+?>
+
+    
+    <header class="header">
+        <h1><?php bloginfo( 'name' ); ?> </h1>
+        <h2><?php bloginfo( 'description' ); ?> </h2>
+    
+    </header>

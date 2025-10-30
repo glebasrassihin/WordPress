@@ -1,0 +1,123 @@
+/**
+* Theme Name: smertvnishite
+* Description: Лев позовнил
+*
+* Authot: КиШ
+* Author URL: http://pornohub.com/
+* 
+* Tags: black, white, purple
+*
+* Version: 1.0
+*/
+:root{
+  --bg-kurort: #c7dcf1;      
+  --title-kurort: #2e6ea0;  
+  --text-kurort: #2a3b4c;  
+  --btn-kurort: #2e6ea0;
+  --btn-kurort-hover: #255f9d;
+}
+
+
+.kurort-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:32px;
+}
+
+
+.kurort-card{
+  position:relative;
+  isolation:isolate;           
+  display:grid;
+  grid-template-columns:minmax(320px,1fr) min(42vw,560px);
+  align-items:center;
+  gap:28px;
+  padding:48px;
+  background:var(--bg-kurort);
+  border-radius:18px;
+  overflow:hidden;
+  min-height:380px;
+}
+
+
+.kurort-card::before,
+.kurort-card::after{
+  content:"";
+  position:absolute;
+  background:#fff;
+  border-radius:50%;
+  z-index:0;
+  pointer-events:none;
+}
+.kurort-card::before{
+  left:22px; top:22px;
+  width:22px; height:22px;  
+}
+.kurort-card::after{
+  right:-50px; bottom:-50px;
+  width:180px; height:180px;   
+}
+
+
+.kurort-card__text{ z-index:1; }
+.kurort-card__title{
+  margin:0 0 14px;
+  color:var(--title-kurort);
+  font-weight:800;
+  font-size:clamp(28px, 4.2vw, 42px);
+  line-height:1.15;
+}
+.kurort-card__title a{
+  color:inherit; text-decoration:none;
+}
+.kurort-card__excerpt{
+  color:var(--text-kurort);
+  font-size:clamp(14px, 1.2vw, 16px);
+  line-height:1.7;
+  margin:0 0 18px;
+}
+
+
+.kurort-card__btn{
+  display:inline-block;
+  padding:12px 18px;
+  background:var(--btn-kurort);
+  color:#fff;
+  border:1px solid #1d5d99;
+  border-radius:6px;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:.04em;
+  transition:background .2s, transform .05s;
+}
+.kurort-card__btn:hover{ background:var(--btn-kurort-hover); }
+.kurort-card__btn:active{ transform:translateY(1px); }
+
+
+.kurort-card__image{ z-index:1; }
+.kurort-card__image a,
+.kurort-card__image img{
+  display:block; width:100%;
+  border-radius:12px;
+}
+.kurort-card__image img{
+  aspect-ratio: 4 / 3;      
+  object-fit:cover;
+  box-shadow:0 10px 28px rgba(0,0,0,.18);
+}
+
+
+.container{ max-width:1120px; margin:0 auto; padding:0 16px; }
+
+@media (max-width: 980px){
+  .kurort-card{
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:36px 24px;
+    min-height:unset;
+  }
+  .kurort-card::after{
+    right:-70px; bottom:-70px; width:200px; height:200px;
+  }
+}
