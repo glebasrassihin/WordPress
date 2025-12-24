@@ -47,9 +47,9 @@
 В `wp-content/themes/creator-portfolio` создан файл `style.css` с метаданными:
 
 ```css
-/*
+
 Theme Name: Creator Portfolio
 Author: Gleb Rassihin
 Description: Классическая Bootstrap‑тема WordPress для портфолио.
 Version: 1.0
-*/
+
